@@ -25,13 +25,13 @@ class Student
      DB[:conn].execute(sql)
   end
 
-  def self.drop_table
-    sql = <<-SQL
-    DROP TABLE students;
-    SQL
+    def self.drop_table
+      sql = <<-SQL
+      DROP TABLE students;
+      SQL
 
-    DB[:conn].execute(sql)
-  end
+      DB[:conn].execute(sql)
+    end
 
     def save
       sql = <<-SQL
@@ -45,8 +45,8 @@ class Student
       @id = DB[:conn].execute(sql, self.name).flatten[0]
     end
 
-    def
-
+    def self.create(attibutes_hash)
+      
     end
 
 
