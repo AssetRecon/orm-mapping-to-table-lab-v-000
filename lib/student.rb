@@ -45,4 +45,10 @@ class Student
       @id = DB[:conn].execute(sql, self.name).flatten[0]
     end
 
+    def
+
+    end
+
+
+
 end
