@@ -10,8 +10,8 @@ class Student
     @grade = grade
   end
 
-  def self.create_table(name, grade)
-     sql = db.execute("CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY, name TEXT, grade INTEGER) VALUES  (?, ?);", [name,grade])
+  def self.create_table
+     sql = db.execute("CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY, name TEXT, grade INTEGER) VALUES);"
   end
 
 
