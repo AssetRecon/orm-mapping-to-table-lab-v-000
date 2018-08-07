@@ -37,14 +37,12 @@ class Student
       sql = <<-SQL
       INSERT INTO students (name, grade) VALUES (?, ?)
       SQL
-
       DB[:conn].execute(sql, self.name, self.grade)
 
       sql = <<-SQL
       SELECT id FROM students WHERE name = ?
       SQL
-
-    @id = DB[:conn].execute(sql, self.name).flatten[0]
+      @id = DB[:conn].execute(sql, self.name).flatten[0]
 
     end
 
