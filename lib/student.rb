@@ -44,7 +44,7 @@ class Student
       SELECT id FROM students WHERE name = ?
       SQL
 
-      DB[:conn].execute(sql, self.name)
+    @name = DB[:conn].execute(sql, self.name)
 
     end
 
