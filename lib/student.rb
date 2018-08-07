@@ -45,7 +45,7 @@ class Student
       @id = DB[:conn].execute(sql, self.name).flatten[0]
     end
 
-    def self.create(attibutes_hash)
+    def self.create(attibute_hash)
       attribute_hash.each {|key, value| self.send(("#{key}="), value)} if attribute_hash != nil
     end
 
